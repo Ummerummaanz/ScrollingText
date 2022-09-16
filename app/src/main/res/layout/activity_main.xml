@@ -3,15 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     tools:context="com.example.scrolling_text.MainActivity">
 
     <TextView
         android:id="@+id/article_heading"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:background="@color/colorPrimary"
         android:padding="@dimen/padding_regular"
         android:text="@string/article_title"
+        android:gravity="center_vertical"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
@@ -25,16 +27,19 @@
 
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/article_subheading"
-                android:layout_width="match_parent"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/article_heading"
                 android:padding="@dimen/padding_regular"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:textStyle="bold"
                 android:text="@string/article_subtitle"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault" />
             <TextView
@@ -43,6 +48,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/article_subheading"
                     android:autoLink="web"
+                android:layout_marginStart="5dp"
                     android:lineSpacingExtra="@dimen/line_spacing"
                     android:padding="@dimen/padding_regular"
                     android:text="@string/article_text" />
